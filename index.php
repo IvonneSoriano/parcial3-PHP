@@ -15,12 +15,12 @@
             <div class="card col-lg-6 ">
                     <h1>Inicia Sesion</h1>
                     <div class="card-body">
-                        <form action="index.php" method="post" >
+                        <form action="login.php" method="post" >
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Usuario" require>
+                                <input type="text" class="form-control" placeholder="Carnet" name="carnet" id="carnet" require>
                             </div>
                             <div class="form-group">
-                                    <input type="password" class="form-control" placeholder="Contrasena" require>
+                                    <input type="password" class="form-control" placeholder="Contrasena" name="contra" id="contra" require>
                                 </div>
                                 <div class="form-group">
                                         <input type="submit" class="btn btn-primary" value="Iniciar Sesion">

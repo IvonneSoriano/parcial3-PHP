@@ -12,9 +12,14 @@
 <?php require 'partials/header.php'?>
 <main>
             <div class="card col-lg-6 ">
+            <?php
+            if(!empty($_GET['error'])){
+                echo "<p>No se pudo registrar meco</p>";
+            }
+            ?>
                     <h1>Registrate</h1>
                     <div class="card-body">
-                        <form action="signup.php" method="post" onsubmit="return validar();">
+                        <form action="registrar.php" method="POST" onsubmit="return validar();">
                             <div class="form-group">
                                 <label for="carnet">Carnet</label>
                                 <input name="carnet" id="carnet" type="text" maxlength="8" class="form-control" placeholder="Ej. SS160344" require>
@@ -65,7 +70,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="resp">Persona Responsable</label>
-                                <input name="resp"  id="resp" type="text" minlength="10" maxlength="50" class="form-control" placeholder="Ej. John Doe" require>
+                                <input name="resp"  id="resp" type="text" minlength="10" maxlength="100" class="form-control" placeholder="Ej. John Doe" require>
                             </div>
                                 <div class="form-group">
                                         <input id="registrar" type="submit" class="btn btn-primary" value="Iniciar Sesion">
@@ -77,7 +82,7 @@
             </div>
                 
             </main>
-        
+            
 </div>
 <?php require 'partials/actions.php'?>
 <script src="js/validacion-signup.js"></script>

@@ -44,7 +44,46 @@ function validar(){
             alert("La persona responsable no es valido");
             return false;
         }
+
         else{
             return true;
         }
-    };          
+    };        
+    $(document).ready(function () {
+        
+        $('#carnet').blur(function () {
+            var carnet = $(this).val();
+            console.log(carnet);
+            if(carnet!=""){
+
+            
+            $.get('checkCarnet.php', {carnet:carnet},function(data){
+                console.log(data);
+                if(data){
+                    alert(data);
+                    $('#carnet').val("");
+                }
+            });
+        }
+
+        });
+
+        $('#dui').blur(function () {
+            var dui = $(this).val();
+            console.log(dui);
+            if(dui!=""){
+
+            
+            $.get('checkdui.php', {dui:dui},function(data){
+                console.log(data);
+                if(data){
+                    alert(data);
+                    $('#dui').val("");
+                }
+            });
+        }
+
+        });
+
+
+      });

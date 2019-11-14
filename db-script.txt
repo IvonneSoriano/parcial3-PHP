@@ -1,0 +1,53 @@
+CREATE DATABASE parcial3;
+USE parcial3;
+
+CREATE TABLE rol(
+    id int PRIMARY KEY,
+    rol varchar(50));
+
+INSERT INTO rol values(1,"admin");
+INSERT INTO rol values(2,"student");
+
+CREATE TABLE carrera(
+    id int PRIMARY KEY,
+    carrera varchar(100));
+
+INSERT INTO carrera values(1, "Ing. en ciencias de la computacion");
+INSERT INTO carrera values(2, "Ing. en Mecatronica");
+INSERT INTO carrera values(3, "Lic. en Idiomas");
+INSERT INTO carrera values(4, "Lic. en Mercadotecnia");
+
+
+CREATE TABLE universidad(
+    id int PRIMARY KEY,
+   uni varchar(100));
+
+INSERT INTO universidad VALUES(1,"Universidad Don Bosco");
+INSERT INTO universidad VALUES(2,"Universidad Nacional de El Salvador");
+INSERT INTO universidad VALUES(3,"Universidad Tecnologica de El Salvador");
+INSERT INTO universidad VALUES(4,"Universidad Jose Simeon Cañas");
+
+
+    CREATE TABLE registro(
+    id int PRIMARY KEY AUTO_INCREMENT,
+      rol int,
+    carnet varchar(8) UNIQUE,
+    nombre varchar(50),
+    apellido varchar(50),
+    contra varchar(255),
+    carrera int,
+    uni int,
+      dui varchar(10) UNIQUE,
+      edad int,
+      resp varchar(100),	
+      FOREIGN KEY (rol) REFERENCES rol(id),
+    FOREIGN KEY (carrera) REFERENCES carrera(id),
+    FOREIGN KEY (uni) REFERENCES universidad(id)
+  );
+
+  INSERT INTO registro VALUES(200,1,"DM0123","Delmy","Majano","e10adc3949ba59abbe56e057f20f883e","1","1","12345689-0",22,"Emilio Lopez");
+      
+      
+    
+
+    
