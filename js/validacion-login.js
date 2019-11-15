@@ -7,41 +7,41 @@ function validar(){
         var i;
         if(!($('#carnet').val().match(carnetPattern))){
             // $('#carnet').css('border-color','red');
-            alert("El carnet no es valido");
+            alertify.error("El carnet no es valido");
             return false;
         }
         else if($('#contra').val()!= $('#confirm').val()){
-            alert("Las contraseñas no coinciden");
+            alertify.error("Las contraseñas no coinciden");
             return false;
         }
         else if(!($('#name').val().match(namePattern))){
-            alert("El nombre no es valido");
+            alertify.error("El nombre no es valido");
             return false;
         }
         else if(!($('#lastname').val().match(namePattern))){
-            alert("El apellido no es valido");
+            alertify.error("El apellido no es valido");
             return false;
         }   
         else if($('#degree').val()==""){
-            alert("Seleccione una carrera");
+            alertify.error("Seleccione una carrera");
             return false;
         }
         else if($('#uni').val()==""){
-            alert("Seleccione una Universidad");
+            alertify.error("Seleccione una Universidad");
             return false;
         }
         else if(!($('#dui').val().match(duiPattern))){
-            alert("El DUI no es valido");
+            alertify.error("El DUI no es valido");
             return false;
         }
         
         else if($('#edad').val()==""){
-            alert("La edad no es valido");
+            alertify.error("La edad no es valido");
             return false;
         }
         
         else if(!($('#resp').val().match(namePattern))){
-            alert("La persona responsable no es valido");
+            alertify.error("La persona responsable no es valido");
             return false;
         }
 
@@ -60,7 +60,7 @@ function validar(){
             $.get('checkCarnet.php', {carnet:carnet},function(data){
                 console.log(data);
                 if(data){
-                    alert(data);
+                    alertify.error(data);
                     $('#carnet').val("");
                 }
             });
@@ -77,7 +77,7 @@ function validar(){
             $.get('checkdui.php', {dui:dui},function(data){
                 console.log(data);
                 if(data){
-                    alert(data);
+                    alertify.error(data);
                     $('#dui').val("");
                 }
             });
