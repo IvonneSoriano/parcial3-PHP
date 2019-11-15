@@ -32,21 +32,13 @@ if($_SESSION['rol']==1){
     <a href="logout.php">cerrar session</a>
     <h1>Dash Alumno</h1>
 <?php endif ?>      
-<<<<<<< HEAD
 
 <?php require 'partials/tabla.php'?>
-=======
-<div id="tabla">
-</div>
->>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
 
 
             </main>
         </div>
-<<<<<<< HEAD
         <?php require 'partials/actions.php'?>
-=======
->>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
 
 
 
@@ -63,11 +55,7 @@ if($_SESSION['rol']==1){
         </button>
       </div>
       <div class="modal-body">
-<<<<<<< HEAD
       <form action="" method="POST" onsubmit="return validar();">
-=======
-      <form action="" method="" onsubmit="return validar();">
->>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
                             <div class="form-group">
                                 <label for="carnet">Carnet</label>
                                 <input name="carnet" id="carnet" type="text" maxlength="8" class="form-control" placeholder="Ej. SS160344" require>
@@ -197,18 +185,5 @@ if($_SESSION['rol']==1){
 </div>
 
 <!-- Termina el modal EDICION -->
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
-<?php require 'partials/actions.php'?>
-<script src="js/validacion-signup.js"></script>
-<script src="js/insertar/insertar.js"></script>
-<script src="js/editar/editar.js"></script>
->>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
 </body>
 </html>

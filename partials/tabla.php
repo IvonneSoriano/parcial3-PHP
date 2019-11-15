@@ -1,16 +1,5 @@
 <?php
-<<<<<<< HEAD
 require "database.php"?>
-=======
-session_start();
-
-$isteacher=false;
-if($_SESSION['rol']==1){
-    $isteacher=true;
-
-}
-include "../database.php"?>
->>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
 <div class="row">
 <div class="col-12">
 <?php if ($isteacher):?>
