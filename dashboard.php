@@ -1,12 +1,12 @@
 <?php
+
 session_start();
+
 $isteacher=false;
 if($_SESSION['rol']==1){
-$isteacher=true;
+    $isteacher=true;
+
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,12 +23,13 @@ $isteacher=true;
 <?php require 'partials/header.php'?>
         <main id="index">
         <?php
-        if($isteacher){
-            echo "
-            <h1>Dash Profesor</h1>"
-        }
-        ?>
-                
+        echo $_SESSION['rol'];?>
+        <?php if ($isteacher):?>
+            
+            <h1>Dash Profesor</h1>
+<?php else: ?>
+    <h1>Dash Alumno</h1>
+<?php endif ?>        
             </main>
         </div>
         <?php require 'partials/actions.php'?>
