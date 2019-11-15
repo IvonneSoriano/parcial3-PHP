@@ -1,7 +1,9 @@
 <?php
+session_start();
+
 include 'database.php';
 
-$rol = 1;
+$rol = 2;
 $carnet = $_POST["carnet"];
 $contra = md5($_POST["contra"]);
 $nombre = $_POST["name"];
@@ -16,8 +18,18 @@ $insert = "INSERT INTO registro(rol,carnet,nombre,apellido,contra,carrera,uni,du
 
 $resultado = mysqli_query($conn,$insert);
 if(!$resultado){
-    header('Location:signup.php?error=1');
+    echo "no registrado";
+    // header('Location:signup.php?error=1');
 }
 else{
-    header('Location:dashboard.php');
+        $select = "SELECT * FROM registro WHERE carnet='$carnet' AND contra='$contra'";
+        $resultado = mysqli_query($conn,$select);
+        $rol=mysqli_fetch_assoc($resultado);
+        $_SESSION['rol']=$rol['rol'];
+        $_SESSION['id']=$rol['id'];
+        $_SESSION['name']=$rol['nombre'];
+        echo $_SESSION['rol'];
+        header('Location:dashboard.php');
+   
+
 }

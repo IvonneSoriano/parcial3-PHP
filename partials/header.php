@@ -8,14 +8,8 @@
             <nav class=" collapse navbar-collapse justify-content-end" id="navbar">
                 <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                        <a href="#" class="nav-link">About Us</a>
+                        <a href="#" class="nav-link">Integrantes</a>
                     </li>
-                    <li class="nav-item">
-                            <a href="#" class="nav-link">Contact</a>
-                        </li>
                         <li class="nav-item">
                                 <a href="signup.php" class="nav-link">Registro</a>
                             </li>
