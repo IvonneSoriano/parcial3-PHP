@@ -185,5 +185,9 @@ if($_SESSION['rol']==1){
 </div>
 
 <!-- Termina el modal EDICION -->
+
+<script src="js/validacion-signup.js"></script>
+<script src="js/editar/editar.js"></script>
+<script src="js/insertar/insertar.js"></script>
 </body>
 </html>
