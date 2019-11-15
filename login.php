@@ -14,7 +14,6 @@ if($resultado ->num_rows>0){
     $_SESSION['rol']=$rol['rol'];
     $_SESSION['id']=$rol['id'];
     $_SESSION['name']=$rol['nombre'];
-    print $_SESSION['rol'];
     header('Location:dashboard.php');
 }
 else{
