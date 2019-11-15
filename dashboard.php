@@ -2,11 +2,13 @@
 
 session_start();
 
+
 $isteacher=false;
 if($_SESSION['rol']==1){
     $isteacher=true;
 
 }
+if(($_SESSION['rol']) !=""){
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -25,6 +27,8 @@ if($_SESSION['rol']==1){
         <?php
         echo $_SESSION['rol'];?>
         <?php if ($isteacher):?>
+        
+            <a href="logout.php">Cerrar Sesión</a>
             
             <h1>Dash Profesor</h1>
 <?php else: ?>
@@ -35,3 +39,9 @@ if($_SESSION['rol']==1){
         <?php require 'partials/actions.php'?>
 </body>
 </html>
+<?php
+}
+else (
+    header('Locatation:index.php')
+);
+?>
