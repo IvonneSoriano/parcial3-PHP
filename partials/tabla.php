@@ -33,11 +33,12 @@ require "database.php"?>
 </thead>
 <tbody> 
 <?php
-$sql = "SELECT carnet,nombre,apellido,carrera.carrera,universidad.uni,dui,edad,resp FROM `registro` INNER JOIN carrera ON registro.carrera=carrera.id INNER JOIN universidad ON registro.uni=universidad.id";
+$sql = "SELECT carnet,nombre,apellido,carrera.carrera,universidad.uni,dui,edad,resp,registro.carrera,registro.uni,registro.id FROM `registro` INNER JOIN carrera ON registro.carrera=carrera.id INNER JOIN universidad ON registro.uni=universidad.id";
 
 $result=mysqli_query($conn,$sql);
 while($ver=mysqli_fetch_row($result)){
 
+        $datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[8]."||".$ver[9]."||".$ver[5]."||".$ver[6]."||".$ver[7]."||".$ver[10];
 ?>
 <tr>
 <td><?php echo $ver[0] ?></td>
@@ -50,7 +51,7 @@ while($ver=mysqli_fetch_row($result)){
 <td><?php echo $ver[7] ?></td>
 <?php if ($isteacher):?>
             <td>
-            <button class="btn btn-warning" data-toggle="modal" data-target="#modalED">
+            <button class="btn btn-warning" data-toggle="modal" data-target="#modalED" onclick="agregaform('<?php echo $datos?>')">
             Editar
             </button>
             </td>

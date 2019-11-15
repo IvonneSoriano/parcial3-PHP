@@ -2,6 +2,7 @@
 session_start();
 include 'database.php';
 
+
 $carnet = $_POST["carnet"];
 $contra = md5($_POST["contra"]);
 $select = "SELECT * FROM registro WHERE carnet='$carnet' AND contra='$contra'";
