@@ -2,13 +2,11 @@
 
 session_start();
 
-
 $isteacher=false;
 if($_SESSION['rol']==1){
     $isteacher=true;
 
 }
-if(($_SESSION['rol']) !=""){
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,21 +24,27 @@ if(($_SESSION['rol']) !=""){
         <main id="index" class="container">
 
         <?php if ($isteacher):?>
-        
-            <a href="logout.php">Cerrar Sesión</a>
             
             <h1>Dash Profesor</h1>
             
 <?php else: ?>
     <h1>Dash Alumno</h1>
 <?php endif ?>      
+<<<<<<< HEAD
 
 <?php require 'partials/tabla.php'?>
+=======
+<div id="tabla">
+</div>
+>>>>>>> 8b5e68f674e2f9393bc39e83f4b2aebe12f21876
 
 
             </main>
         </div>
+<<<<<<< HEAD
         <?php require 'partials/actions.php'?>
+=======
+>>>>>>> 8b5e68f674e2f9393bc39e83f4b2aebe12f21876
 
 
 
@@ -57,7 +61,11 @@ if(($_SESSION['rol']) !=""){
         </button>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
       <form action="" method="POST" onsubmit="return validar();">
+=======
+      <form action="" method="" onsubmit="return validar();">
+>>>>>>> 8b5e68f674e2f9393bc39e83f4b2aebe12f21876
                             <div class="form-group">
                                 <label for="carnet">Carnet</label>
                                 <input name="carnet" id="carnet" type="text" maxlength="8" class="form-control" placeholder="Ej. SS160344" require>
@@ -198,11 +206,17 @@ if(($_SESSION['rol']) !=""){
 </div>
 
 <!-- Termina el modal EDICION -->
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+<?php require 'partials/actions.php'?>
+<script src="js/validacion-signup.js"></script>
+<script src="js/insertar/insertar.js"></script>
+>>>>>>> 8b5e68f674e2f9393bc39e83f4b2aebe12f21876
 </body>
 </html>
-<?php
-}
-else (
-    header('Locatation:index.php')
-);
-?>

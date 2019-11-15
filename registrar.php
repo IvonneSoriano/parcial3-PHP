@@ -22,6 +22,7 @@ if(!$resultado){
     // header('Location:signup.php?error=1');
 }
 else{
+<<<<<<< HEAD
     $select = "SELECT * FROM registro WHERE carnet='$carnet' AND contra='$contra'";
     $resultado = mysqli_query($conn,$select);
     $rol=mysqli_fetch_assoc($resultado);
@@ -30,5 +31,16 @@ else{
     $_SESSION['name']=$rol['nombre'];
     echo $_SESSION['rol'];
     header('Location:dashboard.php');
+=======
+        $select = "SELECT * FROM registro WHERE carnet='$carnet' AND contra='$contra'";
+        $resultado = mysqli_query($conn,$select);
+        $rol=mysqli_fetch_assoc($resultado);
+        $_SESSION['rol']=$rol['rol'];
+        $_SESSION['id']=$rol['id'];
+        $_SESSION['name']=$rol['nombre'];
+        echo $_SESSION['rol'];
+        header('Location:dashboard.php');
+   
+>>>>>>> 8b5e68f674e2f9393bc39e83f4b2aebe12f21876
 
 }
