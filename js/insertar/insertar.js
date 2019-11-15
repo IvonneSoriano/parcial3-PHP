@@ -7,11 +7,11 @@ function addData(carnet,nombre,apellido,contra,degree,uni,dui,edad,resp){
         success:function(r){
             if(r==1){
                 $('#tabla').load('partials/tabla.php');
-                alert("Agregado con exito");
+                alertify.success("Agregado con exito");
             }
             else{
 
-                alert("Fallo el servidor");
+                alertify.error("Fallo el servidor");
             }
         }
     });

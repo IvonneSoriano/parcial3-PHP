@@ -32,13 +32,21 @@ if($_SESSION['rol']==1){
     <a href="logout.php">cerrar session</a>
     <h1>Dash Alumno</h1>
 <?php endif ?>      
+<<<<<<< HEAD
 
 <?php require 'partials/tabla.php'?>
+=======
+<div id="tabla">
+</div>
+>>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
 
 
             </main>
         </div>
+<<<<<<< HEAD
         <?php require 'partials/actions.php'?>
+=======
+>>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
 
 
 
@@ -55,7 +63,11 @@ if($_SESSION['rol']==1){
         </button>
       </div>
       <div class="modal-body">
+<<<<<<< HEAD
       <form action="" method="POST" onsubmit="return validar();">
+=======
+      <form action="" method="" onsubmit="return validar();">
+>>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
                             <div class="form-group">
                                 <label for="carnet">Carnet</label>
                                 <input name="carnet" id="carnet" type="text" maxlength="8" class="form-control" placeholder="Ej. SS160344" require>
@@ -129,18 +141,11 @@ if($_SESSION['rol']==1){
         </button>
       </div>
       <div class="modal-body">
-      <form action="" method="POST" onsubmit="return validar();">
+      <form action="" method="" onsubmit="return validar();">
+      <p class="d-none" id="editar-id"></p>
                             <div class="form-group">
                                 <label for="carnet">Carnet</label>
                                 <input name="carnet" id="editar-carnet" type="text" maxlength="8" class="form-control" placeholder="Ej. SS160344" require>
-                            </div>
-                            <div class="form-group">
-                                <label for="contra">Contraseña</label>
-                                <input name="contra" id="editar-contra" type="password" minlength="6" class="form-control"  require>
-                            </div>
-                            <div class="form-group">
-                                <label for="confirm">Confirmar contraseña</label>
-                                <input name="confirm" id="editar-confirm" type="password" minlength="6" class="form-control"  require>
                             </div>
                             <div class="form-group">
                                 <label for="name">Nombre</label>
@@ -182,10 +187,6 @@ if($_SESSION['rol']==1){
                                 <label for="resp">Persona Responsable</label>
                                 <input name="resp"  id="editar-resp" type="text" minlength="10" maxlength="100" class="form-control" placeholder="Ej. John Doe" require>
                             </div>
-                                <div class="form-group">
-                                        <input id="registrar" type="submit" class="btn btn-primary" value="Iniciar Sesion">
-                                       
-                                    </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-warning" data-dismiss="modal" id="actualizar">Actualizar</button>
@@ -196,5 +197,18 @@ if($_SESSION['rol']==1){
 </div>
 
 <!-- Termina el modal EDICION -->
+<<<<<<< HEAD
+=======
+
+
+
+
+
+
+<?php require 'partials/actions.php'?>
+<script src="js/validacion-signup.js"></script>
+<script src="js/insertar/insertar.js"></script>
+<script src="js/editar/editar.js"></script>
+>>>>>>> ef3d0c1781cd6a7110c87a56667c4d52298e2792
 </body>
 </html>
